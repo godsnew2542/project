@@ -10,7 +10,7 @@ package project1;
  * @author Asus
  */
 import java.util.Scanner;
-public class Project1 {
+abstract class Project1 {
     public static void main (String[] args){
 System.out.println("Welcome to the airline");
     Customer cu = new Customer();
