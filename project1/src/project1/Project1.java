@@ -273,4 +273,5 @@ class Print extends PO{
      System.out.println("Total is : "+po(po)+"คน\t"+salary()+"฿");
       SSD d = new SSD();
       d.hbd(); //ใส่เงิน
+      //ลอง
     }}
