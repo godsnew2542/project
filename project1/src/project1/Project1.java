@@ -25,5 +25,5 @@ class Customer{
         System.out.print("User Name : ");
 name2 =sc.nextLine();
     //pcx pc = new pcx();
-pc.msxing();
+//pc.msxing();
 }}
