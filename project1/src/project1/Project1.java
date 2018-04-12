@@ -11,7 +11,7 @@ package project1;
  */
 import java.util.Scanner;
 abstract class Project1 {
-    public static void main (String[] args){
+     public static void main (String[] args){
 System.out.println("Welcome to the airline");
     Customer cu = new Customer();
     cu.Customer();
@@ -137,11 +137,11 @@ class Population implements Adult{
      Scanner sc1 = new Scanner(System.in);    //String
      char ceat;
      do{  System.out.println("**จำนวนผู้โดยสาร**");
-   System.out.print("Adult : "); 
+   System.out.print("Number Adult : "); 
   a=sc.nextInt();
-   System.out.print("Child : ");
+   System.out.print("Number Child : ");
    b=sc.nextInt();
-  System.out.print("Baby :  ");
+  System.out.print("Number Baby :  ");
   c=sc.nextInt();
    System.out.print("OK ป่าว ok กด y : "); // check
    String gosc=sc1.nextLine();
@@ -223,7 +223,9 @@ if (pay >= sum){ass=5;  g=1;}
 else{System.out.println("<<<<<Try again>>>>>"+"\n------------------------------");  g=2;}  } 
     double oop=pay-sum;
     if (g==1){System.out.println("เงินทอน =\t "+oop+"฿");
-        System.out.println("<<<<<Thank you>>>>>"+"\n------------------------------");}
+        System.out.println("<<<<<Thank you>>>>>"+"\n------------------------------");
+            pcx pc = new pcx();  
+            pc.pcx1();}
     else{v1();}  }
 public static void v1(){
     char ceat;
@@ -270,7 +272,5 @@ class Print extends PO{
      System.out.println("Children : decrease 400฿/1 \nBaby \t : Free฿");
      System.out.println("Total is : "+po(po)+"คน\t"+salary()+"฿");
       SSD d = new SSD();
-      d.hbd();
-    pcx pc = new pcx();
-pc.pcx1();
+      d.hbd(); //ใส่เงิน
     }}
