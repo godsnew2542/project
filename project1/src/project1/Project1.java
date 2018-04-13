@@ -205,7 +205,7 @@ public void smsing(){
 }}
 abstract class PO{
   static int po;
-public static int po(int po){
+public static int po1(int po){
 Population P = new Population();
 po =P.a+P.b+P.c;
 return po;
@@ -270,7 +270,7 @@ class Print extends PO{
      System.out.println("Go to : "+S.Select+"\t>>"+S.zx1+"\t"+S.A+"฿");
      System.out.println("<<Promotion for children  and baby>>" );
      System.out.println("Children : decrease 400฿/1 \nBaby \t : Free฿");
-     System.out.println("Total is : "+po(po)+"คน\t"+salary()+"฿");
+     System.out.println("Total is : "+po1(po)+"คน\t"+salary()+"฿");
       SSD d = new SSD();
       d.hbd(); //ใส่เงิน
     }}
