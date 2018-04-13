@@ -16,7 +16,7 @@ System.out.println("Welcome to the airline");
     Customer cu = new Customer();
     cu.Customer();
 }}
-class Customer{
+class Customer extends Project1{
     static String name2;
     static int sale;
     static double sale1;
@@ -273,5 +273,4 @@ class Print extends PO{
      System.out.println("Total is : "+po(po)+"คน\t"+salary()+"฿");
       SSD d = new SSD();
       d.hbd(); //ใส่เงิน
-      //ลอง
     }}
