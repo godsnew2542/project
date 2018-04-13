@@ -11,16 +11,18 @@ package project1;
  */
 import java.util.Scanner;
 abstract class Project1 {
-     public static void main (String[] args){
-System.out.println("Welcome to the airline");
+    public static void main (String[] args){
+    System.out.println("Welcome to the airline");
     Customer cu = new Customer();
     cu.Customer();
-}}
+}
+public abstract void Customer();
+}
 class Customer extends Project1{
     static String name2;
     static int sale;
     static double sale1;
-      public static void Customer(){
+      public void Customer(){
         Scanner sc = new Scanner(System.in);
         System.out.print("User Name : ");
 name2 =sc.nextLine();
