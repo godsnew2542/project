@@ -187,11 +187,13 @@ System.out.print("จะเอาอีกไหม : ถ้าไม่เอ�
 public void msxing(){// check ใช่ป่าวของ Usuer
     CustomerCheck ch = new CustomerCheck();
     Customer cu = new Customer();
-System.out.print(">>>>You Sure<<<<< "+"\nSure y : ");
+     while(ceat!='y' && ceat!='Y' && ceat!='n' && ceat!='N'){
+System.out.print(">>You Sure<< Yes=y and No=n "+"\nSure y : ");
    String go=sc1.nextLine();
     ceat=go.charAt(0);
+     System.out.println("--------------------");}
   System.out.println("********************");
-   if(ceat!='y' && ceat!='Y'){cu.Customer();} //ไปใส่ใหม่
+   if(ceat=='n' || ceat=='N'){cu.Customer();} //ไปใส่ใหม่
    else {ch.check();} // ไปส่วนของ สมาชิก กับ ไม่เป็นสมาชิก 
 }
 public void smsing(){
