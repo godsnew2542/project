@@ -16,9 +16,9 @@ abstract class Project1 {
     Customer cu = new Customer();
     cu.Customer();
 }
-public abstract void Customer();
+public abstract void Customer1();
 }
-class Customer extends Project1{
+class Customer extends Costmer1{
     static String name2;
     static int sale;
     static double sale1;
@@ -26,9 +26,15 @@ class Customer extends Project1{
         Scanner sc = new Scanner(System.in);
         System.out.print("User Name : ");
 name2 =sc.nextLine();
-    pcx pc = new pcx();
+ Customer1();
+}
+public void Customer1(){
+        pcx pc = new pcx();
 pc.msxing();
 }}
+abstract class Costmer1 extends Project1{
+public abstract void Customer();
+}
 class CustomerCheck extends Customer{
     private String a1 = "new",a2="mean";
     public static String zx;
