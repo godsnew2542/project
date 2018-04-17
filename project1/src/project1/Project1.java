@@ -18,10 +18,10 @@ abstract class Project1 {
 }
 public abstract void Customer1();
 }
-abstract class Costmer01 extends Project1{
+abstract class Costmer2 extends Project1{
 public abstract void Customer();
 }
-class Customer extends Costmer01{
+class Customer extends Costmer2{
     public static String name2,zx1;
       public void Customer(){
         Scanner sc = new Scanner(System.in);
@@ -46,14 +46,14 @@ switch(name2){
    case "new" : System.out.println("\t**VIP** ");break;
     case "mean" : System.out.println("\t**VIP** ");break;
     default:System.out.println("\t\t**Normal**");break;}
-if(name2.equals(aa)||name2.equals(ab)){sale=5; sale1=0.95;zx1="null"; System.out.println("************************"); S.selectregion();}
-else{sale=0; sale1=1.00; N.national();}
+if (name2.equals(aa) || name2.equals(ab)) {sale=5; sale1=0.95; zx1="null"; System.out.println("************************"); S.selectregion();}
+else {sale=0; sale1=1.00; N.national();}
     }
 }
 class nation {
     public static String zx,na,thai;
     public static void national(){
-Scanner sc = new Scanner(System.in);
+Scanner sc = new Scanner(System.in);//String
 char check;
 do{ System.out.print("Thai nation = y  \nForeigner nation = n "+ "\nYou Enter : ");
 na = sc.nextLine();
@@ -70,7 +70,7 @@ class SelectRegion{
     public static String Select,zx1;
     public static int A,select;
     static pcx pc = new pcx();
-    static Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in); //int
 public static void selectregion(){
          do{  System.out.println("    --------------------");
          System.out.println("\tเลือกภาคที่จะไป");
@@ -90,8 +90,8 @@ do{  System.out.println("\t*****North*****");
     System.out.println("------------------------------");
     System.out.print("Number is : ");
  select = sc.nextInt();
-}while(select!=1&&select!=2&&select!=3);
-if(select==1){zx1="Chiang Mai";   A=1500;}
+}while (select!=1 && select!=2 && select!=3);
+if (select==1){zx1="Chiang Mai";   A=1500;}
 else if (select==2){zx1="Mae Hong Son";   A=1400;}
 else {zx1="Phitsanulok";   A=1200;}
 pc.pcx();
@@ -102,8 +102,8 @@ System.out.println("Roi Et(1,600)  : \t1"+"\nNakhon Phanom(1,400)  : 2"+"\nKhon 
 System.out.println("------------------------------");
 System.out.print("Number is : ");
 select = sc.nextInt();
-}while(select !=1 && select !=2 && select !=3);
-if( select==1){zx1="Roi Et";   A=1600;}
+}while (select !=1 && select !=2 && select !=3);
+if ( select==1){zx1="Roi Et";   A=1600;}
 else if (select==2){zx1="Nakhon Phanom";   A=1400;}
 else {zx1="Khon Kaen";   A=1400;}
 pc.pcx();
@@ -114,8 +114,8 @@ System.out.println("Bangkok(1,200)  : 1"+"\nPattaya(1,400)  : 2");
 System.out.println("------------------------------");
 System.out.print("Number is : ");
 select = sc.nextInt();
-}while(select !=1&&select !=2);
-if( select==1){zx1="Bangkok";   A=1200;}
+}while (select !=1 && select !=2);
+if ( select==1){zx1="Bangkok";   A=1200;}
 else {zx1="Pattaya";   A=1400;}
 pc.pcx();
 }
@@ -125,8 +125,8 @@ System.out.println("Hat Yai(1,000)  : \t1"+"\nPhuket(1,400)  : \t2"+"\nSurat Tha
 System.out.println("------------------------------");
 System.out.print("Number is : ");
 select = sc.nextInt();
-}while(select !=1 && select !=2&& select !=3&& select !=4);
-if( select==1){zx1="Hat Yai ";   A=1000;}
+}while (select !=1 && select !=2 && select !=3 && select !=4);
+if ( select==1){zx1="Hat Yai ";   A=1000;}
 else if (select==2){zx1="Phuket";   A=1400;}
 else if (select==3){zx1="Surat Thani";   A=1200;}
 else {zx1="Trang";   A=1400;}
@@ -152,9 +152,9 @@ System.out.print("Enter : ");
    String pop=sc1.nextLine();
       ceat=pop.charAt(0);
        System.out.println("------------------------------");
-   }while(ceat!='y' && ceat!='Y' && ceat!='n' && ceat!='N');
+   }while (ceat!='y' && ceat!='Y' && ceat!='n' && ceat!='N');
        Print p = new Print();
-   if(ceat!='Y'&&  ceat!='y'){Adulting();}//ขึ้นไปเลือกภาคใหม่
+   if (ceat!='Y'&&  ceat!='y'){Adulting();}//ขึ้นไปเลือกภาคใหม่
    else{ p.print();} //ไปถามจำนวนคน
 }
 }
@@ -174,39 +174,40 @@ interface sms{
 abstract void smsing();
 }
 class pcx implements pcr,pci,msx,sms{
-    static Scanner sc1 = new Scanner(System.in);
+    static Scanner sc1 = new Scanner(System.in);// String
     private char ceat;
     static SelectRegion Se = new SelectRegion();
     static Customer cu = new Customer();
 public void pcx(){ // checkว่าไป ไหม ของ จังหวันนั้น  
     Population P = new Population();
-System.out.println("<<< Ok ป่าว \tOk กด y \tNo กด n >>>");
+do {  System.out.println("<<< Ok ป่าว \tOk กด y \tNo กด n >>>");
 System.out.print("Enter : ");
    String gosc=sc1.nextLine();
       ceat=gosc.charAt(0);
-   if(ceat!='Y'&&  ceat!='y'){Se.selectregion();}//ขึ้นไปเลือกภาคใหม่
+}while (ceat!='Y' && ceat!='y' && ceat!='N' && ceat!='n');
+   if (ceat=='N' || ceat=='n'){Se.selectregion();}//ขึ้นไปเลือกภาคใหม่
    else{P.Adulting();} //ไปถามจำนวนคน
 }
-public void pcx1(){
+public void pcx1(){//ตอนจบ ใส่เงินไม่เกิน 5 รอบ
 System.out.print("จะเอาอีกไหม : ถ้าไม่เอาเพิ่มกด N แต่ถ้าเพื่มกด Y : ");
    String go=sc1.nextLine();
    ceat=go.charAt(0);
-   if(ceat>='y'&&  ceat>='Y'){smsing();}
+   if (ceat>='y'&&  ceat>='Y'){smsing();}
    else if (ceat>='n'&&  ceat>='N'){ System.out.println("***********Thank you***********");}
-   else{pcx1();}
+   else {pcx1();}
 }
-public void msxing(){// check ใช่ป่าวของ Usuer
+public void msxing(){ //check ใช่ป่าวของ Usuer
     CustomerCheck ch = new CustomerCheck();
-     while(ceat!='y' && ceat!='Y' && ceat!='n' && ceat!='N'){
+     while (ceat!='y' && ceat!='Y' && ceat!='n' && ceat!='N'){
 System.out.print(">>You Sure<< Yes=y and No=n "+"\nEnter : ");
    String go=sc1.nextLine();
     ceat=go.charAt(0);
-     System.out.println("--------------------");}
-   if(ceat=='n' || ceat=='N'){cu.Customer();} //ไปใส่ใหม่
+     System.out.println("--------------------");
+     }
+   if (ceat=='n' || ceat=='N'){cu.Customer();} //ไปใส่ใหม่
    else {ch.check();} // ไปส่วนของ สมาชิก กับ ไม่เป็นสมาชิก 
 }
 public void smsing(){
-    CustomerCheck ch = new CustomerCheck();
     do{   System.out.print("Will you be the same name? \nSure : y \tNo sure : n \nAnswer : ");
    String gosc=sc1.nextLine();
     ceat=gosc.charAt(0);
@@ -225,7 +226,7 @@ return po;
 }
 }
 class SSD extends Print {
-    static double pay;
+    public static double pay;
 public static void hbd(){
 Scanner sc = new Scanner(System.in);//double
     int ass=0,g=0;
@@ -234,40 +235,38 @@ Scanner sc = new Scanner(System.in);//double
         System.out.print("Enter money to pay : ");  //รับเงินมา5ครั้ง
 pay=sc.nextDouble();
 if (pay >= sum){ass=5; g=1;} 
-else{System.out.println("<<<<<Try again>>>>>"+"\n------------------------------");  g=2;}  
+else{System.out.println("<<<<<Try again>>>>>"+"\n------------------------------");}  
     }
-    double oop=pay-sum;
-    if (g==1){System.out.println("เงินทอน =\t "+oop+"฿");
-        System.out.println("<<<<<Thank you>>>>>"+"\n------------------------------");
-            pcx pc = new pcx();  
-            pc.pcx1();}
-    else{v1();}
+    double money = pay-sum;
+    pcx pc = new pcx();  
+    if (g==1){System.out.println("เงินทอน =\t " + money + "฿");
+        System.out.println("<<<<<Thank you>>>>>"+"\n------------------------------");   pc.pcx1();}
+    else{Error();}
 }
-public static void v1(){
+public static void Error(){
     char ceat;
     Scanner sc1 = new Scanner(System.in);//String
-    CustomerCheck ch = new CustomerCheck();
     Customer cu = new Customer();
-    SelectRegion S = new SelectRegion();
-    do{  System.out.print("Error \tPress:y to try again  Press:n to stop\nEnter :");
+    do{  System.out.print("Error \tPress:y to try again  Press:n to stop the program \nEnter : ");
    String go=sc1.nextLine();
     ceat=go.charAt(0);
   System.out.println("********************");
     }while(ceat!='y'&&ceat!='Y'&&ceat!='n'&&ceat!='N');
-   if(ceat!='y' && ceat!='Y'){cu.Customer(); }
-   else {S.selectregion();}
+   if(ceat!='N' && ceat!='n'){cu.Customer(); }
+   else {System.out.println("<<<<<Thank you>>>>>");}
 }
 }
 class Print extends PO{
-    static double sum = 0, sum1 = 0, sum2 = 0;
-    static Customer cu= new Customer();
-    static Population P = new Population();
-    static SelectRegion S = new SelectRegion();
-     static CustomerCheck ch = new CustomerCheck();
+    public static double sum = 0, sum1 = 0, sum2 = 0;
+    public static Customer cu= new Customer();
+    public static Population P = new Population();
+    public static SelectRegion S = new SelectRegion();
+     public static CustomerCheck ch = new CustomerCheck();
+     public static nation N = new nation();
     public static double salary(){
     sum1= ch.sale1*(P.a*S.A);
     sum2= ch.sale1*((P.b*S.A)-(P.b*400));
-    sum=sum1+sum2;
+    sum = sum1+sum2;
     System.out.println("\t>>ผู้โดยสาร<<");
     System.out.println("Adult is : "+P.a+"คน"+"\t"+sum1+"฿");
     System.out.println("Child is : "+P.b+"คน"+"\t"+sum2+"฿");
@@ -279,12 +278,11 @@ class Print extends PO{
         System.out.println("\t\t>>>>>slip<<<<<");
         System.out.println("User Name : " +cu.name2);
         System.out.println("You have a discount : "+ch.sale +"%");
-     nation N = new nation();
-     if(cu.name2.equals(a1)||cu.name2.equals(a2)){System.out.println("nationality : "+ch.zx1);}
-     else {System.out.println("nationality : "+N.zx);}
+     if(cu.name2.equals(a1)||cu.name2.equals(a2)){ System.out.println("nationality : "+ch.zx1);}
+     else { System.out.println("nationality : "+N.zx);}
      System.out.println("Go to : "+S.Select+"\t>>"+S.zx1+"\t"+S.A+"฿");
      System.out.println("<<Promotion for children and baby>>" );
-     System.out.println("Children : decrease 400฿/1 \nBaby \t : Free฿");
+     System.out.println("Children : decrease 400฿/1    \nBaby \t : Free฿");
      System.out.println("Total is : "+po1(po)+"คน\t"+salary()+"฿");
       SSD d = new SSD();
       d.hbd(); //ใส่เงิน
