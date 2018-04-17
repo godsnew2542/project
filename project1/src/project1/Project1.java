@@ -189,11 +189,11 @@ System.out.print("Enter : ");
    else{P.Adulting();} //ไปถามจำนวนคน
 }
 public void pcx1(){//ตอนจบ ใส่เงินไม่เกิน 5 รอบ
-System.out.print("จะเอาอีกไหม : ถ้าไม่เอาเพิ่มกด N แต่ถ้าเพื่มกด Y : ");
+System.out.print("\t=====จะเอาอีกไหม===== \nNo = N       Yes = Y : ");
    String go=sc1.nextLine();
    ceat=go.charAt(0);
-   if (ceat>='y'&&  ceat>='Y'){smsing();}
-   else if (ceat>='n'&&  ceat>='N'){ System.out.println("***********Thank you***********");}
+   if (ceat!='n' && ceat!='N'){smsing();}
+   else if (ceat!='y' && ceat!='Y'){ System.out.println("***********Thank you***********");}
    else {pcx1();}
 }
 public void msxing(){ //check ใช่ป่าวของ Usuer
@@ -246,13 +246,14 @@ else{System.out.println("<<<<<Try again>>>>>"+"\n------------------------------"
 public static void Error(){
     char ceat;
     Scanner sc1 = new Scanner(System.in);//String
-    Customer cu = new Customer();
+    //Customer cu = new Customer();
+    pcx pc = new pcx();
     do{  System.out.print("Error \tPress:y to try again  Press:n to stop the program \nEnter : ");
    String go=sc1.nextLine();
     ceat=go.charAt(0);
   System.out.println("********************");
     }while(ceat!='y'&&ceat!='Y'&&ceat!='n'&&ceat!='N');
-   if(ceat!='N' && ceat!='n'){cu.Customer(); }
+   if(ceat!='N' && ceat!='n'){pc.smsing(); }
    else {System.out.println("<<<<<Thank you>>>>>");}
 }
 }
