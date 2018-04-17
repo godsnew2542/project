@@ -208,7 +208,7 @@ System.out.print(">>You Sure<< Yes=y and No=n "+"\nEnter : ");
    else {ch.check();} // ไปส่วนของ สมาชิก กับ ไม่เป็นสมาชิก 
 }
 public void smsing(){
-    do{   System.out.print("Will you be the same name? \nSure : y \tNo sure : n \nAnswer : ");
+    do{   System.out.print("Will you be the same name? \nSure : y \tNo : n \nEnter : ");
    String gosc=sc1.nextLine();
     ceat=gosc.charAt(0);
   System.out.println("********************");
