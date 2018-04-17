@@ -246,7 +246,6 @@ else{System.out.println("<<<<<Try again>>>>>"+"\n------------------------------"
 public static void Error(){
     char ceat;
     Scanner sc1 = new Scanner(System.in);//String
-    //Customer cu = new Customer();
     pcx pc = new pcx();
     do{  System.out.print("Error \tPress:y to try again  Press:n to stop the program \nEnter : ");
    String go=sc1.nextLine();
