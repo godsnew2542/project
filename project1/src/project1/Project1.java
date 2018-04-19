@@ -231,12 +231,14 @@ public static void hbd(){
 Scanner sc = new Scanner(System.in);//double
     int ass=0,g=0;
     System.out.println("------------------------------");
+    for(int x=5;x>=1;x++){
     for (int f=5 ; ass<f ; ass++){
-        System.out.print("Enter money to pay : ");  //รับเงินมา5ครั้ง
+        System.out.print("["+x+"]"+"Enter money to pay : ");  //รับเงินมา5ครั้ง
 pay=sc.nextDouble();
+x--;
 if (pay >= sum){ass=5; g=1;} 
 else{System.out.println("<<<<<Try again>>>>>"+"\n------------------------------");}  
-    }
+    }}
     double money = pay-sum;
     pcx pc = new pcx();  
     if (g==1){System.out.println("เงินทอน =\t " + money + "฿");
