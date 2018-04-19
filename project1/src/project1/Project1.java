@@ -233,11 +233,11 @@ Scanner sc = new Scanner(System.in);//double
     System.out.println("------------------------------");
     for(int x=5;x>=1;x++){
     for (int f=5 ; ass<f ; ass++){
-        System.out.print("["+x+"]"+"Enter money to pay : ");  //รับเงินมา5ครั้ง
+        System.out.print("Enter money to pay : ");  //รับเงินมา5ครั้ง
 pay=sc.nextDouble();
 x--;
 if (pay >= sum){ass=5; g=1;} 
-else{System.out.println("<<<<<Try again>>>>>"+"\n------------------------------");}  
+else{System.out.println("<<<<<Try againz["+x+"]"+">>>>>"+"\n------------------------------");}  
     }}
     double money = pay-sum;
     pcx pc = new pcx();  
